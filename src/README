@@ -1,0 +1,10 @@
+####### PROJETO DE AGENDA DE CONTATOS #######
+
+1º projeto em java utilizando a programação orientada a objetos.
+
+A intenção do projeto é praticar os conhecimentos obtidos dos pilares do POO, abstração, encapsulamento,
+herança e polimorfismo.
+
+Após a construção do algoritmo, pretendo criar uma interface simples, incialmente utilizando Swing, em seguida
+implementar uma mais moderna utilziando JavaFX ou Spring Boot.
+
