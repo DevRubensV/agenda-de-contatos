@@ -5,7 +5,7 @@ public class Agenda {
     private ArrayList<Contato> contatos;
 
     //Construtor inicializando a lista
-    public Agenda(ArrayList<Contato> contatos) {
+    public Agenda() {
         this.contatos = new ArrayList<>();
     }
 
@@ -19,6 +19,31 @@ public class Agenda {
     //-> é o operador da função lambda em Java
     //Nesse caso, para cada contato "c" na lista de contatos,
     //verifica se o nome é igual ao parâmetro recebido.
-        contatos.removeIf(d -> d.getNome().equalsIgnoreCase(nome));
+        contatos.removeIf(c -> c.getNome().equalsIgnoreCase(nome));
+    }
+
+    public Contato buscarContato(String nome) {
+        for (Contato c:contatos) {
+            if (c.getNome().equalsIgnoreCase(nome)) {
+                return c;
+            }
+        }
+        System.out.println("Contato não encontrado!");
+        return null;
+    }
+
+    public void listarContatos(){
+        for (Contato c:contatos){
+            System.out.println(c);
+        }
+    }
+
+    public void editarNomeContato(String nome, String novoNome){
+        for (Contato c:contatos){
+            if(c.getNome().equalsIgnoreCase(nome)){
+                c.setNome(novoNome);
+                System.out.println(c);
+            }
+        }
     }
 }
