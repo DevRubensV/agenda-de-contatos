@@ -38,10 +38,28 @@ public class Agenda {
         }
     }
 
-    public void editarNomeContato(String nome, String novoNome){
+    public void editarNome(String nome, String novoNome){
         for (Contato c:contatos){
             if(c.getNome().equalsIgnoreCase(nome)){
                 c.setNome(novoNome);
+                System.out.println(c);
+            }
+        }
+    }
+
+    public void editarEmail(String email, String novoEmail){
+        for (Contato c:contatos){
+            if(c.getEmail().equalsIgnoreCase(email)){
+                c.setEmail(novoEmail);
+                System.out.println(c);
+            }
+        }
+    }
+
+    public void editarNumero(String numero, String novoNumero){
+        for (Contato c:contatos){
+            if(c.getEmail().equalsIgnoreCase(numero)){
+                c.setEmail(novoNumero);
                 System.out.println(c);
             }
         }
